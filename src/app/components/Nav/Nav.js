@@ -36,8 +36,8 @@ const Nav = () => {
 
 
         <Link className={` ${barlowCondensed.className}  link special`} href="/"><span>00</span> HOME</Link>
-        <Link className={` ${barlowCondensed.className}  link`} href="/destination"><span>01</span> DESTINATION</Link>
-        <Link className={` ${barlowCondensed.className} link`} href="/crew"><span>02</span> CREW</Link>
+        <Link className={` ${barlowCondensed.className}  link`} href="space/destination"><span>01</span> DESTINATION</Link>
+        <Link className={` ${barlowCondensed.className} link`} href="/Crew"><span>02</span> CREW</Link>
         <Link className={`${barlowCondensed.className} link `} href=""><span>03</span>TECHNOLOGY </Link>
       </div>
 
