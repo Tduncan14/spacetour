@@ -7,4 +7,79 @@
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
+    color:#fff;
+    display:flex;
+    flex-direction: column;
+}
+
+
+.content{
+    display: flex;
+    justify-content: space-around; /* Horizontal centering */
+    align-items: center;    /* Vertical centering */
+    height: 100%;   
+}
+
+
+.para{
+    line-height:2.4rem;
+    color:#D0D6F9;
+    font-size:1.1rem;
+    letter-spacing:.1rem;
+}
+
+
+
+/* left side */
+
+
+.wrapperfive{
+    letter-spacing:4.75px;
+    font-size:28px;
+    color:#D0D6F9;
+
+}
+
+.spaceR{
+    letter-spacing:29.75px;
+    margin-top:.3rem;
+    font-size:150px;
+    margin-bottom:2rem;
+
+}
+
+
+
+
+
+
+
+
+/* doing the button first */
+
+
+
+/*  */
+
+.rightButton{
+    background:white;
+    color:black;
+    height:320px;
+    width:320px;
+    border-radius:50%;
+    cursor:pointer;
+    position:relative;
+    top:4rem;
+}
+
+.explore{
+    font-weight:600 !important;
+    font-size:50px;
+    color:black;
+    
+}
+
+
+.rightButton:hover{
+
 }
