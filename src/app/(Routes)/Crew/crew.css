@@ -6,6 +6,7 @@ body{
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
+    
 }
 
 
@@ -14,8 +15,71 @@ body{
     width: 100%;
     height: 100vh;
 
+
 }
 
 .content{
     display:flex;
+    padding:4rem;
+    padding-left:8rem;
+    padding-right:8rem;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+/* crewProfile */
+
+.crewProfile{
+    display: flex;
+
+
+}
+
+.crewBioPro{
+    flex:2;
+   
+}
+
+
+.crewPic{
+    flex:1;
+    width:100%;
+    position: relative;
+}
+
+
+.crewBio{
+    width:75%;
+    font-size:clamp(18px,22px,23px);
+}
+
+.imageMe{
+    position:relative;
+    top:-170px;
+    height:800px;
+    width:800px;
+   
+
+  
+   
+}
+
+
+
+/* the crew font sizez */
+
+
+.hugeMeet{
+    font-size:3rem;
+    margin-top:3.4rem;
+    margin-bottom:4.2rem;
+}
+.crewRole{
+    font-size:2.5rem;
+}
+
+
+.crewName{
+    font-size:5rem;
 }

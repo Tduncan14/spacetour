@@ -1,9 +1,23 @@
 "use client"
 
-import { useState, useEffect } from "react";
+
+import { useState } from "react";
 import './crew.css';
 import Image from "next/image";
+import { Bellefair, Barlow_Condensed } from 'next/font/google';
 import Nav from '../../components/Nav/Nav';
+
+
+
+const bellefair = Bellefair({
+    subsets: ['latin'], // Specify the subset (default is 'latin')
+    weight: '400', // Bellefair only supports Regular (400)
+});
+
+const barlowCondensed = Barlow_Condensed({
+    subsets: ['latin'], // Specify the subset
+    weight: ['400', '700'], // Specify the font weights you need
+});
 
 const crew = [
     {
@@ -46,61 +60,60 @@ const crew = [
         role: "Flight Engineer",
         bio: "Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space."
     }
-]
+];
 
 const Crew = () => {
+    const [index, setIndex] = useState(0);
 
-    const [index, setIndex] = useState(1);
+    const nextMember = () => {
+        setIndex((prevIndex) => (prevIndex + 1) % crew.length);
+    };
 
+    const prevMember = () => {
+        setIndex((prevIndex) => (prevIndex - 1 + crew.length) % crew.length);
+    };
 
-
-
-
-    useEffect(() => {
-
-    }, [index]);
     return (
         <>
             <Nav />
-            <div className="crew">
 
-                <div className="headerMe flex">
-                    <h1> <span> 02 </span> MEET YOUR CREW</h1>
-                </div>
 
-                {/* this is the content */}
+            {/* this is the content */}
+            <div className="content flex flex-col">
 
-                <div className="content">
+                <div className="crew">
+                    <div className="headerMe flex">
+                        <h1 className={`${barlowCondensed.className} hugeMeet`}><span>02</span> MEET YOUR CREW</h1>
+                    </div>
+                    {/* header */}
+                    <div className="flex crewProfile">
+                        <div className="crewBioPro">
+                            <h2 className={` ${barlowCondensed.className} crewRole `}>{crew[index].role}</h2>
+                            <h1 className={` ${barlowCondensed.className} crewName`}>{crew[index].name}</h1>
+                            <p className={` ${barlowCondensed.className} crewBio `}>{crew[index].bio}</p>
 
-                    {crew && crew.map((member, index) => (
-                        <div key={member.id} className="">
 
-                            <div className="CrewBio">
-                                <h2 className="crewRole">{member.role}</h2>
-                                <h1 className="crewName">{member.name}</h1>
-
-                                <p>{member.bio}</p>
+                            {/* Navigation Buttons */}
+                            <div className="crewNavigation">
+                                <button onClick={prevMember}>Previous</button>
+                                <button onClick={nextMember}>Next</button>
                             </div>
-
-
-                            <div className="CrewPic">
-
-                                <Image src={`${member.images.png}`} alt="" height={100} width={100} />
-
-
-                            </div>
-
-
                         </div>
-                    ))}
-
+                        <div className="crewPic">
+                            <Image className='imageMe'
+                                src={crew[index].images.png}
+                                alt={crew[index].name}
+                                height={1500}
+                                width={1500}
+                            />
+                        </div>
+                    </div>
 
 
                 </div>
-
             </div>
         </>
-    )
-}
+    );
+};
 
-export default Crew
+export default Crew;
