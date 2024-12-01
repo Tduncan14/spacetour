@@ -1,7 +1,7 @@
 "use client"
 
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import './crew.css';
 import Image from "next/image";
 import { Bellefair, Barlow_Condensed } from 'next/font/google';
@@ -22,7 +22,7 @@ const barlowCondensed = Barlow_Condensed({
 const crew = [
     {
         name: "Douglas Hurley",
-        id: 1,
+        id: 0,
         images: {
             png: "/image-douglas-hurley.png",
             webp: "/image-douglas-hurley.webp"
@@ -32,7 +32,7 @@ const crew = [
     },
     {
         name: "Mark Shuttleworth",
-        id: 2,
+        id: 1,
         images: {
             png: "/image-mark-shuttleworth.png",
             webp: "/image-mark-shuttleworth.webp"
@@ -42,7 +42,7 @@ const crew = [
     },
     {
         name: "Victor Glover",
-        id: 3,
+        id: 2,
         images: {
             png: "/image-victor-glover.png",
             webp: "/image-victor-glover.webp"
@@ -52,7 +52,7 @@ const crew = [
     },
     {
         name: "Anousheh Ansari",
-        id: 4,
+        id: 3,
         images: {
             png: "/image-anousheh-ansari.png",
             webp: "/image-anousheh-ansari.webp"
@@ -61,46 +61,70 @@ const crew = [
         bio: "Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space."
     }
 ];
-
 const Crew = () => {
     const [index, setIndex] = useState(0);
 
-    const nextMember = () => {
-        setIndex((prevIndex) => (prevIndex + 1) % crew.length);
+    // Filter function to update the index based on the button click
+    const filterMembers = (id) => {
+        const memberIndex = crew.findIndex(member => member.id === id);
+        if (memberIndex !== -1) {
+            setIndex(memberIndex);
+        }
     };
 
-    const prevMember = () => {
-        setIndex((prevIndex) => (prevIndex - 1 + crew.length) % crew.length);
-    };
+
+    useEffect(() => {
+
+    }, [index])
+
+
+    // const nextMember = () => {
+    //     setIndex((prevIndex) => (prevIndex + 1) % crew.length);
+    // };
+
+    // const prevMember = () => {
+    //     setIndex((prevIndex) => (prevIndex - 1 + crew.length) % crew.length);
+    // };
+
+
+
 
     return (
         <>
             <Nav />
 
-
-            {/* this is the content */}
+            {/* Content */}
             <div className="content flex flex-col">
-
                 <div className="crew">
                     <div className="headerMe flex">
-                        <h1 className={`${barlowCondensed.className} hugeMeet`}><span>02</span> MEET YOUR CREW</h1>
+                        <h1 className={`${barlowCondensed.className} hugeMeet`}>
+                            <span>02</span> MEET YOUR CREW
+                        </h1>
                     </div>
-                    {/* header */}
+
+                    {/* Crew Profile Section */}
                     <div className="flex crewProfile">
                         <div className="crewBioPro">
-                            <h2 className={` ${barlowCondensed.className} crewRole `}>{crew[index].role}</h2>
-                            <h1 className={` ${barlowCondensed.className} crewName`}>{crew[index].name}</h1>
-                            <p className={` ${barlowCondensed.className} crewBio `}>{crew[index].bio}</p>
-
+                            <h2 className={`${barlowCondensed.className} crewRole`}>{crew[index].role}</h2>
+                            <h1 className={`${bellefair.className} crewName`}>{crew[index].name}</h1>
+                            <p className={`${barlowCondensed.className} crewBio`}>{crew[index].bio}</p>
 
                             {/* Navigation Buttons */}
                             <div className="crewNavigation">
-                                <button onClick={prevMember}>Previous</button>
-                                <button onClick={nextMember}>Next</button>
+                                {crew.map((member) => (
+                                    <button
+                                        key={member.id}
+                                        className={`${index === crew.findIndex(item => item.id === member.id) ? 'button active' : 'button active'}`}
+                                        onClick={() => filterMembers(member.id)}
+                                    >
+
+                                    </button>
+                                ))}
                             </div>
                         </div>
                         <div className="crewPic">
-                            <Image className='imageMe'
+                            <Image
+                                className="imageMe"
                                 src={crew[index].images.png}
                                 alt={crew[index].name}
                                 height={1500}
@@ -108,8 +132,6 @@ const Crew = () => {
                             />
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </>
