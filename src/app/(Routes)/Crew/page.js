@@ -114,7 +114,7 @@ const Crew = () => {
                                 {crew.map((member) => (
                                     <button
                                         key={member.id}
-                                        className={`${index === crew.findIndex(item => item.id === member.id) ? 'button active' : 'button active'}`}
+                                        className={`${index === crew.findIndex(item => item.id === member.id) ? 'button active' : 'button '}`}
                                         onClick={() => filterMembers(member.id)}
                                     >
 
