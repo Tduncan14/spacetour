@@ -90,7 +90,7 @@ const Crew = () => {
 
 
     return (
-        <>
+        <div className="bodyImage">
             <Nav />
 
             {/* Content */}
@@ -134,7 +134,7 @@ const Crew = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 
