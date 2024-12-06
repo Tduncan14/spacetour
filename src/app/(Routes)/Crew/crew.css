@@ -3,7 +3,7 @@
     background-size: cover; /* Ensures the image covers the entire container */
     background-repeat: no-repeat; /* Prevents tiling */
     overflow:hidden;
-    height:140vh;
+    height:min-content;
 
 }
 
@@ -25,7 +25,7 @@
     padding-right: 10rem;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    
 }
 
 /* crewProfile */
@@ -53,11 +53,12 @@
 .crewBio {
     width: 80%;
     font-size: clamp(15px, 24px, 26px);
+    position:relative;
 
 }
 
 .imageMe {
-    position: relative;
+    position:absolute;
     top: -170px;
     height: 800px;
     width: 800px;
