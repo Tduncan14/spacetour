@@ -20,7 +20,7 @@ export default function Home() {
       <Nav />
 
 
-      <div className="content">
+      <div className="contents">
 
         <div class="leftHome">
 

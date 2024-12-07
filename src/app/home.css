@@ -13,9 +13,9 @@
 }
 
 
-.content{
+.contents{
     display: flex;
-    justify-content: space-around; /* Horizontal centering */
+    justify-content: space-evenly; /* Horizontal centering */
     align-items: center;    /* Vertical centering */
     height: 100%;   
 }
