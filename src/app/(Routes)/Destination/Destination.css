@@ -16,7 +16,7 @@
     color:white;
     margin-top:3rem;
     padding:2rem;
-    justify-content: space-around;
+    justify-content: space-evenly;
     
     
 }
@@ -36,11 +36,11 @@
     flex-direction:column;
     flex:1;
 
-    background-color:blue;
 }
 
 .hone{
-    font-size:30px;
+    font-size:38px;
+    padding-left:2rem;
 }
 
 .planetImage{
@@ -51,11 +51,72 @@
 .planetBio{
     flex:1;
     
-    background-color:red;
+    
 }
 
 
 .buttons{
     display:flex;
-    gap:20px;
+    gap:30px;
+    font-size:22px;
+}
+
+
+
+.planetName{
+    font-size:88px;
+    letter-spacing:15px;
+}
+
+.paraPlanets{
+    font-size:22px;
+    width:80%;
+}
+
+/*  how to shorten hr line  */
+
+
+.lineMe{
+    width: 80%;
+    
+  
+}
+
+
+.planetImage ,.planetBio{
+
+    padding:1rem;
+    /* padding-left:1.2rem;
+    padding-right:1.2rem; */
+}
+
+
+.travelInfo{
+    display:flex;
+    gap:150px;
+    margin-top:1.5rem;
+}
+
+.travelInfo span{
+    font-size:14px;
+     
+}
+
+.travelInfo p {
+    font-size:30px;
+}
+
+
+.planetButton{
+    margin-bottom:2rem;
+    margin-top:5rem;
+    border-bottom:2px  solid transparent;
+    padding-bottom:1rem;
+}
+
+
+
+.planetButton:hover{
+    border-bottom:2px solid white;
+    padding-bottom:1rem;
 }

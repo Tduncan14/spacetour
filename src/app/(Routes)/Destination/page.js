@@ -107,10 +107,33 @@ const Destination = () => {
                         ))}
                     </div>
 
-                    <h2>{destinations[index].name}</h2>
-                    <p>{destinations[index].description}</p>
-                    <p>Distance: {destinations[index].distance}</p>
-                    <p>Travel Time: {destinations[index].travel}</p>
+                    <h2 className={` ${bellefair.className} planetName`}>{destinations[index].name}</h2>
+                    <p className={` ${barlowCondensed.className} paraPlanets`}>{destinations[index].description}</p>
+
+
+
+                    <hr className="mt-8 lineMe   h-px my-8 bg-gray-200 border-0 dark:bg-gra" />
+                    <div class="travelInfo">
+
+                        <div className="travelLeft">
+
+
+                            <span className="timeDistance"> AVG.DISTANCE</span>
+                            <p> {destinations[index].distance}</p>
+
+                        </div>
+
+
+                        <div className="travelRight">
+
+                            <span className="timeDistance"> EST.TRAVEL TIME</span>
+                            <p> {destinations[index].travel}</p>
+                        </div>
+
+
+
+                    </div>
+
                 </div>
             </div>
         </div>
