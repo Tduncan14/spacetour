@@ -1,3 +1,6 @@
+
+"use client";
+
 import Image from "next/image";
 import './home.css'
 import Nav from "./components/Nav/Nav";

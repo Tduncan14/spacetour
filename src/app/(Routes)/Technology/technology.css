@@ -2,6 +2,125 @@
     background-image:url('/background-technology-desktop.jpg');
     background-size:cover;
     background-repeat:no-repeat;
-    height:100%;
     width:100%;
+    min-height:100%;
+    color:white;
+}
+
+
+.techArea{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    margin-top:7rem;
+    padding-bottom:4rem;
+    
+
+}
+
+
+.technologyBody{
+    display:flex;
+    flex-direction:column;
+  
+}
+
+
+/* the sides */
+
+.technologyLeft{
+    display:flex;
+    flex-direction:column;
+    flex:1;
+    margin-right:2rem;
+    padding-left:10rem;
+}
+
+
+.headMe h1 {
+    flex:1;
+    margin-bottom:3rem;
+    margin-left:11.5rem;
+    margin-top:3.5rem;
+}
+
+.carrySpace{
+    flex:1;
+}
+
+
+
+.technologyRight{
+    display:flex;
+    flex:1;
+    flex-direction:row-reverse;
+}
+
+
+
+.technologyContent{
+    display:flex;
+    gap:80px;
+
+}
+
+
+/* BUTTON AREA */
+
+.buttonTech{
+    display:flex;
+    flex-direction: column;
+    row-gap:50px;
+    justify-self:flex-start;
+}
+
+
+.techButton{
+    border-radius:50%;
+    height:100px;
+    width:100px;
+    border:solid 1px white;
+}
+
+
+/* image for button */
+
+.imageMg{
+     object-fit: cover;
+}
+
+
+
+
+
+/*  this is content area */
+
+.contentTech{
+    flex:1;
+
+
+}
+
+
+
+
+/* 
+text for the termonilogy parts */
+
+
+.textTech{
+    margin-bottom:1rem;
+    margin-top:1rem;
+}
+
+
+.textHead{
+    font-size:clamp(1rem, 5.5rem, 7rem);
+    text-wrap:nowrap;
+}
+
+
+.paraTech{
+    font-size:clamp(1rem,1.3rem,2rem);
+    line-height:2.3rem;
 }

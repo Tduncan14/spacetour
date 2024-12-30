@@ -1,8 +1,13 @@
 
 
+body{
+    height:100vh;
+}
+
 .home{
     width: 100%;
-    height: 100vh;
+    height:100%;
+    min-height:min-content;
     background-image: url('/background-home-desktop.jpg');
     background-size:cover;
     background-repeat: no-repeat;
@@ -17,7 +22,7 @@
     display: flex;
     justify-content: space-evenly; /* Horizontal centering */
     align-items: center;    /* Vertical centering */
-    height: 100%;   
+    height: min-content;   
 }
 
 
@@ -69,7 +74,7 @@
     border-radius:50%;
     cursor:pointer;
     position:relative;
-    top:4rem;
+
 }
 
 .explore{
@@ -79,7 +84,32 @@
     
 }
 
-
+/* 
 .rightButton:hover{
+
+} */
+
+
+
+
+@media screen and (max-width:868px){
+
+
+    .contents{
+        display:flex;
+        flex-direction:column;
+    }
+
+
+    
+.rightButton{
+    background:white;
+    color:black;
+    height:320px;
+    width:320px;
+    border-radius:50%;
+    cursor:pointer;
+
+}
 
 }
