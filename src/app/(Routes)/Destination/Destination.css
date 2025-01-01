@@ -4,6 +4,8 @@
     background-image:url('/background-destination-desktop.jpg');
     width:100%;
     height:min-content;
+    background-size:cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -119,4 +121,36 @@
 .planetButton:hover{
     border-bottom:2px solid white;
     padding-bottom:1rem;
+}
+
+
+
+@media screen and (max-width:968px){
+
+
+
+    .body{
+        background-image:url('/background-destination-tablet.jpg');
+    }
+
+    .hone{
+        font-size:clamp(18px, 30px,35px);
+    }
+
+    .contentPlanet{
+        display:flex;
+        color:white;
+        margin-top:3rem;
+        padding:2rem;
+        flex-direction:column;
+        
+        
+    }
+
+
+    .planetBio{
+        justify-items:center;
+        text-align: center;
+    }
+
 }
