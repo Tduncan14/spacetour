@@ -111,6 +111,14 @@ const Technology = () => {
 
 
                     />
+
+
+                    <img className="imageScape"
+                        src={technology[index].images.landscape}
+                        alt={technology[index].name}
+
+
+                    />
                 </div>
             </div>
         </div>

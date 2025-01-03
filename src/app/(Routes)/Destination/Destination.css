@@ -1,10 +1,8 @@
-
-
-.body{
-    background-image:url('/background-destination-desktop.jpg');
-    width:100%;
-    height:min-content;
-    background-size:cover;
+.body {
+    background-image: url('/background-destination-desktop.jpg');
+    width: 100%;
+    height: min-content;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -13,143 +11,145 @@
 /*  the content area */
 
 
-.contentPlanet{
-    display:flex;
-    color:white;
-    margin-top:3rem;
-    padding:2rem;
+.contentPlanet {
+    display: flex;
+    color: white;
+    margin-top: 3rem;
+    padding: 2rem;
     justify-content: space-evenly;
-    
-    
+
+
 }
 
 
-.planetImage{
-    height:400px;
-    width:400px;
-    align-self:center;
-    
+.planetImage {
+    height: 400px;
+    width: 400px;
+    align-self: center;
+
 }
 
 /* the pages Content */
 
-.planetLeft{
-    display:flex;
-    flex-direction:column;
-    flex:1;
+.planetLeft {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 
 }
 
-.hone{
-    font-size:38px;
-    padding-left:2rem;
+.hone {
+    font-size: 38px;
+    padding-left: 2rem;
 }
 
-.planetImage{
-    margin-top:4rem;
-}
-
-
-.planetBio{
-    flex:1;
-    
-    
+.planetImage {
+    margin-top: 4rem;
 }
 
 
-.buttons{
-    display:flex;
-    gap:30px;
-    font-size:22px;
+.planetBio {
+    flex: 1;
+
+
+}
+
+
+.buttons {
+    display: flex;
+    gap: 30px;
+    font-size: 22px;
 }
 
 
 
-.planetName{
-    font-size:88px;
-    letter-spacing:15px;
+.planetName {
+    font-size: 88px;
+    letter-spacing: 15px;
 }
 
-.paraPlanets{
-    font-size:22px;
-    width:80%;
+.paraPlanets {
+    font-size: 22px;
+    width: 80%;
 }
 
 /*  how to shorten hr line  */
 
 
-.lineMe{
+.lineMe {
     width: 80%;
-    
-  
+
+
 }
 
 
-.planetImage ,.planetBio{
+.planetImage,
+.planetBio {
 
-    padding:1rem;
+    padding: 1rem;
     /* padding-left:1.2rem;
     padding-right:1.2rem; */
 }
 
 
-.travelInfo{
-    display:flex;
-    gap:150px;
-    margin-top:1.5rem;
+.travelInfo {
+    display: flex;
+    gap: 150px;
+    margin-top: 1.5rem;
 }
 
-.travelInfo span{
-    font-size:14px;
-     
+.travelInfo span {
+    font-size: 14px;
+
 }
 
 .travelInfo p {
-    font-size:30px;
+    font-size: 30px;
 }
 
 
-.planetButton{
-    margin-bottom:2rem;
-    margin-top:5rem;
-    border-bottom:2px  solid transparent;
-    padding-bottom:1rem;
-}
-
-
-
-.planetButton:hover{
-    border-bottom:2px solid white;
-    padding-bottom:1rem;
+.planetButton {
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 1rem;
 }
 
 
 
-@media screen and (max-width:968px){
+.planetButton:hover {
+    border-bottom: 2px solid white;
+    padding-bottom: 1rem;
+}
 
 
 
-    .body{
-        background-image:url('/background-destination-tablet.jpg');
+@media screen and (max-width:968px) {
+
+
+
+    .body {
+        background-image: url('/background-destination-tablet.jpg');
     }
 
-    .hone{
-        font-size:clamp(18px, 30px,35px);
+    .hone {
+        font-size: clamp(18px, 30px, 35px);
     }
 
-    .contentPlanet{
-        display:flex;
-        color:white;
-        margin-top:3rem;
-        padding:2rem;
-        flex-direction:column;
-        
-        
+    .contentPlanet {
+        display: flex;
+        color: white;
+        margin-top: 3rem;
+        padding: 2rem;
+
+        flex-direction: column;
+
+
     }
 
 
-    .planetBio{
-        justify-items:center;
+    .planetBio {
+        justify-items: center;
         text-align: center;
     }
 

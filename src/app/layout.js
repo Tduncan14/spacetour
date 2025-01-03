@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import Nav from "./components/Nav/Nav";
+import Sidenav from './components/sideNave/Sidenav'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -25,7 +26,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <>
-
+          <Sidenav />
           {children}
 
         </>

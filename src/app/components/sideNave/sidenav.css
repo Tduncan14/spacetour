@@ -1,0 +1,23 @@
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* Covers its parent (e.g., body) */
+    min-height: 100vh;
+
+}
+
+
+
+.contentSid {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    opacity: .1;
+    width: 100%;
+    height: 100%;
+    /* Covers its parent (e.g., body) */
+    min-height: 100vh;
+    background: orange;
+}
