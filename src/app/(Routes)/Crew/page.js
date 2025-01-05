@@ -6,6 +6,7 @@ import './crew.css';
 import Image from "next/image";
 import { Bellefair, Barlow_Condensed } from 'next/font/google';
 import Nav from '../../components/Nav/Nav';
+import Sidenav from "../../components/sideNave/Sidenav";
 
 
 
@@ -91,6 +92,7 @@ const Crew = () => {
 
     return (
         <div className="bodyImage">
+            <Sidenav />
             <Nav />
 
             {/* Content */}

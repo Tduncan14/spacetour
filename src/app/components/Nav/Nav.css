@@ -132,3 +132,23 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     
 
 }
+
+
+
+@media screen and (max-width:590px){
+
+
+    .rightNav{
+        display:none;
+    }
+
+    .leftNav{
+        display:none;
+    }
+
+
+    .rightNavSMediumSmall{
+        display:none;
+    }
+   
+}

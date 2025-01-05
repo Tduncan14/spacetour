@@ -3,6 +3,7 @@ import Image from 'next/image'
 import './Nav.css'
 import Link from 'next/link'
 import { Bellefair, Barlow_Condensed } from 'next/font/google';
+import Sidenav from '../sideNave/Sidenav';
 
 // Configure the fonts
 const bellefair = Bellefair({
@@ -55,6 +56,17 @@ const Nav = () => {
         <Link className={` ${barlowCondensed.className} link`} href="/Crew"><span>02</span> CREW</Link>
         <Link className={`${barlowCondensed.className} link `} href="/Technology"><span>03</span>TECHNOLOGY </Link>
       </div>
+
+
+
+      {/* small responsive nav */}
+
+
+
+
+
+      <Sidenav />
+
 
 
     </div>

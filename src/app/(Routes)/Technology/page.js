@@ -5,6 +5,7 @@ import Image from 'next/image';
 import './technology.css';
 import { Bellefair, Barlow_Condensed } from 'next/font/google';
 import Nav from '../../components/Nav/Nav';
+import Sidenav from '../../components/sideNave/Sidenav';
 
 const bellefair = Bellefair({
     subsets: ['latin'],
@@ -58,6 +59,8 @@ const Technology = () => {
 
     return (
         <div className='technologyBody'>
+
+
             <Nav />
 
 

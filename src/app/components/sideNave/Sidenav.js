@@ -1,16 +1,48 @@
-'use client'
-
-import { useState, useEffect } from 'react'
-import './sidenav.css'
+'use client';
+import { useState } from 'react';
+import './sidenav.css';
 
 const Sidenav = () => {
+    const [showNav, setShowNav] = useState(false);
 
-    const showNav = useState(false)
     return (
-        <div className='contentSid'>
+        <>
+            <div className="responsiveNav">
 
-        </div>
-    )
-}
+                <div class="sideLeftNav">
+                    {/* Access the image directly with a relative path */}
+                    <img src="/logo.svg" alt="logo" />
 
-export default Sidenav
+
+
+                </div>
+
+
+                <div className="sideRightNav">
+                    {/* Add a click handler for the hamburger menu */}
+                    <button className="burgerStack">
+                        <img classname="hamburger"
+                            src="/icon-hamburger.svg"
+                            alt="hamburger"
+                            onClick={() => setShowNav(!showNav)}
+                        />
+                    </button>
+                </div>
+            </div>
+
+            {showNav && (
+                <div className="contentSid">
+                    {/* Add a close button */}
+                    <img
+                        src="/icon-close.svg"
+                        alt="close"
+                        onClick={() => setShowNav(false)}
+                    />
+                    <p>Menu Content Goes Here</p>
+                </div>
+            )}
+        </>
+    );
+};
+
+export default Sidenav;

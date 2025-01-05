@@ -12,12 +12,68 @@ body {
 .contentSid {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 50%;
+    display:none;
     width: 50%;
-    opacity: .1;
+    opacity: 1;
+    z-index:999;
     width: 100%;
     height: 100%;
     /* Covers its parent (e.g., body) */
     min-height: 100vh;
     background: orange;
+}
+
+
+.responsiveNav{
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+    padding:2rem;
+}
+
+
+
+.sideRightNav{
+   
+}
+
+
+.sideLeftNav{
+   
+    
+}
+
+.burgerStack{
+    cursor:pointer;
+    height:100%;
+    width:100%;
+    cursor:pointer;
+}
+
+
+
+@media screen and (min-width:591px){
+
+.responsiveNav{
+    display:none;
+}
+
+
+}
+
+@media screen and (max-width:590px){
+
+
+    .responsiveNav{
+        display:flex;
+        
+    }
+
+    .contentSid{
+        display:block;
+        top: 0;
+        left: 700px;
+    }
+
 }
