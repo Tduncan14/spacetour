@@ -92,7 +92,7 @@ const Crew = () => {
 
     return (
         <div className="bodyImage">
-            <Sidenav />
+
             <Nav />
 
             {/* Content */}
