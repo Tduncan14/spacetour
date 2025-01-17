@@ -66,7 +66,7 @@ const Technology = () => {
 
 
             <div className="headMe">
-                <h1>
+                <h1 className='spaceTitle'>
                     <span>03</span> SPACE LAUNCH 101
                 </h1>
 

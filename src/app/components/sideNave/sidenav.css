@@ -102,9 +102,10 @@ body {
 
 
 
-@media screen and (min-width:991px) {
+@media screen and (min-width:591px) {
 
-    .responsiveNav {
+    .responsiveNav,
+    .sideRightNav {
         display: none;
     }
 

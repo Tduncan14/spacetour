@@ -57,7 +57,7 @@ const Sidenav = () => {
             </div>
 
             {/* Side Menu */}
-            <div className={widthScreen < 800 && showNav ? 'activeContentSide' : 'contentSid'}>
+            <div className={widthScreen < 600 && showNav ? 'activeContentSide' : 'contentSid'}>
                 <div className="overlaySIDE"></div>
 
                 <button className="closeButton" onClick={() => setShowNav(false)}>
