@@ -153,4 +153,9 @@
         text-align: center;
     }
 
+
+    .travelInfo {
+        text-wrap: nowrap;
+    }
+
 }

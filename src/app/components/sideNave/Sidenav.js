@@ -1,9 +1,8 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './sidenav.css';
 import Link from 'next/link';
 import { Bellefair, Barlow_Condensed } from 'next/font/google';
-
 
 const bellefair = Bellefair({
     subsets: ['latin'],
@@ -16,7 +15,26 @@ const barlowCondensed = Barlow_Condensed({
 });
 
 const Sidenav = () => {
-    const [showNav, setShowNav] = useState(null);
+    const [showNav, setShowNav] = useState(false);
+    const [widthScreen, setWidthScreen] = useState(0); // Initialize with 0 for SSR compatibility
+
+    useEffect(() => {
+        // Function to update the screen width
+        const handleResize = () => {
+            setWidthScreen(window.innerWidth);
+        };
+
+        // Set initial width on mount
+        handleResize();
+
+        // Add event listener
+        window.addEventListener('resize', handleResize);
+
+        // Cleanup listener on unmount
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     return (
         <>
@@ -39,15 +57,27 @@ const Sidenav = () => {
             </div>
 
             {/* Side Menu */}
-            <div className={showNav ? 'activeContentSide' : 'contentSid'}>
+            <div className={widthScreen < 800 && showNav ? 'activeContentSide' : 'contentSid'}>
+                <div className="overlaySIDE"></div>
+
                 <button className="closeButton" onClick={() => setShowNav(false)}>
-                    <img src="/icon-close.svg" alt="Close navigation menu" />
+                    <img className="closeMe" src="/icon-close.svg" alt="Close navigation menu" />
                 </button>
 
-                <Link className={` ${barlowCondensed.className}  link `} href="/"><span>00</span> HOME</Link>
-                <Link className={` ${barlowCondensed.className}  link`} href="/Destination"><span>01</span> DESTINATION</Link>
-                <Link className={` ${barlowCondensed.className} link`} href="/Crew"><span>02</span> CREW</Link>
-                <Link className={`${barlowCondensed.className} link `} href="/Technology"><span>03</span>TECHNOLOGY </Link>
+                <div className="navMe">
+                    <Link className={`${barlowCondensed.className} link`} href="/">
+                        <span>00</span> HOME
+                    </Link>
+                    <Link className={`${barlowCondensed.className} link`} href="/Destination">
+                        <span>01</span> DESTINATION
+                    </Link>
+                    <Link className={`${barlowCondensed.className} link`} href="/Crew">
+                        <span>02</span> CREW
+                    </Link>
+                    <Link className={`${barlowCondensed.className} link`} href="/Technology">
+                        <span>03</span> TECHNOLOGY
+                    </Link>
+                </div>
             </div>
         </>
     );

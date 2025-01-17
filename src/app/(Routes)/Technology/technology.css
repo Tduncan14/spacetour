@@ -133,6 +133,13 @@ text for the termonilogy parts */
 }
 
 
+.active {
+    color: black;
+    font-size: 26px;
+    font-weight: 700;
+    background: white;
+}
+
 
 /* media area */
 
@@ -146,15 +153,20 @@ text for the termonilogy parts */
 
     .technologyContent {
         flex-direction: column;
+        justify-content: center;
+        padding: 2rem;
 
     }
+
 
 
     .buttonTech {
         display: flex;
         flex-direction: row;
         gap: 20px;
-        justify-self: flex-start;
+        justify-content: center;
+
+
     }
 
     /* technology area  */
@@ -167,6 +179,8 @@ text for the termonilogy parts */
 
     .contentTech {
         order: 1;
+        padding: 1rem;
+
 
     }
 
@@ -174,6 +188,7 @@ text for the termonilogy parts */
         order: 0;
 
     }
+
 
 
     /* image area */
@@ -197,5 +212,28 @@ text for the termonilogy parts */
         margin-right: auto;
     }
 
+    /*  */
 
+
+    .technologyLeft {
+        padding-left: 0;
+        margin-right: auto;
+        margin-left: auto;
+
+
+    }
+
+}
+
+
+
+@media screen and (max-width:569px) {
+    .paraTech {
+        padding: 3.0rem;
+    }
+
+    .textHead {
+        font-size: 4.8rem;
+        text-align: center;
+    }
 }
