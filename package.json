@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "add": "^2.0.6",
     "next": "15.0.3",
     "npm": "^11.0.0",
     "react": "19.0.0-rc-66855b96-20241106",
@@ -16,6 +17,7 @@
   },
   "devDependencies": {
     "@types/node": "22.9.3",
+    "@types/react": "^19.0.7",
     "eslint": "^8",
     "eslint-config-next": "15.0.3",
     "postcss": "^8",
