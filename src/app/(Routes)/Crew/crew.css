@@ -1,9 +1,11 @@
 .bodyImage {
     background-image: url('/background-crew-desktop.jpg');
-    background-size: cover; /* Ensures the image covers the entire container */
-    background-repeat: no-repeat; /* Prevents tiling */
-    overflow:hidden;
-    height:min-content;
+    background-size: cover;
+    /* Ensures the image covers the entire container */
+    background-repeat: no-repeat;
+    /* Prevents tiling */
+    overflow: hidden;
+    height: min-content;
 
 }
 
@@ -12,7 +14,7 @@
 
 .crew {
     color: white;
-  
+
 
 
 
@@ -23,10 +25,10 @@
     padding: 4rem;
     padding-left: 10rem;
     padding-right: 10rem;
-    margin-bottom:9rem;
-    justify-content:space-evenly;
+    margin-bottom: 9rem;
+    justify-content: space-evenly;
     align-items: center;
-    
+
 }
 
 /* crewProfile */
@@ -54,12 +56,12 @@
 .crewBio {
     width: 80%;
     font-size: clamp(15px, 24px, 26px);
-    position:relative;
+    position: relative;
 
 }
 
 .imageMe {
-    position:absolute;
+    position: absolute;
     top: -170px;
     height: 800px;
     width: 800px;
@@ -122,46 +124,48 @@
 
 
 
-@media screen and (max-width:968px){
+@media screen and (max-width:968px) {
 
 
     .bodyImage {
         background-image: url('/background-crew-tablet.jpg');
-        background-size: cover; /* Ensures the image covers the entire container */
-        background-repeat: no-repeat; /* Prevents tiling */
-        overflow:hidden;
-        height:min-content;
-    
-    }
-
-
-    
-    .content{
-        padding-bottom:0;
-        margin-bottom:0;
-    }
-
-
-    .crewProfile{
-        flex-direction:column;
-    }
-
-    .crewPic{
-        order:1;
-       height:1000px;
-       margin-top:4rem;
+        background-size: cover;
+        /* Ensures the image covers the entire container */
+        background-repeat: no-repeat;
+        /* Prevents tiling */
+        overflow: hidden;
+        height: min-content;
 
     }
 
-    .imageMe{
+
+
+    .content {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+
+    .crewProfile {
+        flex-direction: column;
+    }
+
+    .crewPic {
+        order: 1;
+        height: 1000px;
+        margin-top: 4rem;
+
+    }
+
+    .imageMe {
         position: initial;
-        width:700px;
-        height:700%;
-        margin-top:auto;
+        width: 700px;
+        height: 700%;
+        margin-top: auto;
     }
 
-    .crewBio{
-        order:-1;
+    .crewBio {
+        order: -1;
     }
 }
 
@@ -169,35 +173,37 @@
 
 
 
-@media screen and (max-width:568px){
+@media screen and (max-width:568px) {
 
 
     .bodyImage {
         background-image: url('/background-crew-mobile.jpg');
-        background-size: cover; /* Ensures the image covers the entire container */
-        background-repeat: no-repeat; /* Prevents tiling */
-        overflow:hidden;
-        height:min-content;
-    
+        background-size: cover;
+        /* Ensures the image covers the entire container */
+        background-repeat: no-repeat;
+        /* Prevents tiling */
+        overflow: hidden;
+        height: min-content;
+
     }
 
 
-    .crewProfile{
-        flex-direction:column;
-        justify-items:center;
-        
+    .crewProfile {
+        flex-direction: column;
+        justify-items: center;
+
     }
 
-    .crewPic{
-        order:-1;
+    .crewPic {
+        order: -1;
     }
 
-    .imageMe{
+    .imageMe {
         position: initial;
     }
 
-    .crewBio{
-        order:1;
-        justify-items:center;
+    .crewBio {
+        order: 1;
+        justify-items: center;
     }
 }
